@@ -27,3 +27,6 @@ explicit = true
 [tool.uv.sources]
 isaacsim = { index = "nvidia" }
 curobo = { workspace = true }
+# curobo uses a pre-compiled python wheel for trajectory-smoothing for python 3.8.
+# since isaac >= 5.0 requires python >= 3.11, we need to use a source build of trajectory-smoothing
+trajectory-smoothing = { git = "https://github.com/balakumar-s/trajectory_smoothing.git" }
